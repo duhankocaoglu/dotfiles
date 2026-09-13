@@ -1,3 +1,1 @@
-personal config for i3.
-
-
+personal configs
