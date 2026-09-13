@@ -237,3 +237,7 @@ exec --no-startup-id xset -dpms
 # start picom
 
 exec --no-startup-id picom -b
+
+# setup live sync dotfile repo
+
+exec --no-startup-id ~/dotfiles/auto-sync.sh
