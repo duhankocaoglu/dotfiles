@@ -37,6 +37,11 @@ client.background       #1a1b26
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# set refresh rate
+exec --no-startup-id xrandr --output DP-2 --mode 1920x1200 --rate 165
+
+
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 

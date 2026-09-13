@@ -1,0 +1,2 @@
+bleopt accept_line_threshold=-1
+bleopt term_bracketed_paste_mode=off
