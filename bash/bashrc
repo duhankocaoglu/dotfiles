@@ -126,3 +126,4 @@ alias clip='xclip -selection clipboard'
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/bin:$PATH"
+# test line for auto-sync
