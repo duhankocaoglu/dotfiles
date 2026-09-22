@@ -12,6 +12,8 @@ Alacritty, Kitty, i3status, and Polybar.
 
 | Directory | Destination | Purpose |
 | --- | --- | --- |
+| `.xinitrc` | `~/.xinitrc` | Starts i3 when running `startx` |
+| `.zshrc` | `~/.zshrc` | Zsh completion, autosuggestions, highlighting, and history |
 | `alacritty/` | `~/.config/alacritty/` | Alacritty font settings |
 | `bash/` | `~/.bashrc`, `~/.blerc` | Bash, fzf, ble.sh, aliases, and completion |
 | `i3/` | `~/.config/i3/` | Minimal, keyboard-focused i3 setup |
@@ -19,6 +21,10 @@ Alacritty, Kitty, i3status, and Polybar.
 | `kitty/` | `~/.config/kitty/` | Tokyo Night-inspired Kitty theme |
 | `nvim/` | `~/.config/nvim/` | Neovim setup managed by lazy.nvim |
 | `polybar/` | `~/.config/polybar/` | Optional Catppuccin-style Polybar |
+
+`.bashrc` at the repository root is a minimal fallback. The installer deliberately
+uses the more complete `bash/bashrc` configuration instead, so the two files do
+not compete for `~/.bashrc`.
 
 `auto-sync.sh` is an optional repository-maintenance helper. The installer does
 not start or install it because it automatically commits and pushes changes.
@@ -42,6 +48,9 @@ The script:
    `~/.local/state/dotfiles-backups/<timestamp>/`.
 4. Creates symlinks from your home directory to this repository.
 5. Creates `~/Pictures/Screenshots` for the i3 screenshot shortcuts.
+
+It also installs Zsh, its autosuggestion and syntax-highlighting plugins, and
+`xorg-xinit` for the newly included `.zshrc` and `.xinitrc`.
 
 To create only the links without installing packages:
 
@@ -138,6 +147,37 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 The Spotify module only displays information while Spotify is available through
 `playerctl`.
+
+## Starting i3 with startx
+
+The included `.xinitrc` contains `exec i3`. From a TTY, start the X11 session
+with:
+
+```bash
+startx
+```
+
+If you use a display manager, it can launch i3 directly and `.xinitrc` may not
+be used.
+
+## Shell configurations
+
+Both Bash and Zsh configs are included:
+
+- Bash uses `bash/bashrc` and `bash/blerc`.
+- Zsh uses the root `.zshrc`, including completion, persistent history,
+  autosuggestions, and syntax highlighting.
+- The small root `.bashrc` is retained as a minimal reference but is not linked
+  by the installer.
+
+The installer does not change your login shell. To use Zsh by default after
+installation:
+
+```bash
+chsh -s "$(command -v zsh)"
+```
+
+Log out and back in for the login-shell change to take effect.
 
 ## Neovim
 

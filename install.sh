@@ -26,10 +26,14 @@ packages=(
   ripgrep
   ttf-jetbrains-mono-nerd
   xclip
+  xorg-xinit
   xorg-setxkbmap
   xorg-xinput
   xorg-xrandr
   xorg-xsetroot
+  zsh
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 usage() {
@@ -109,6 +113,8 @@ backup_and_link() {
 backup_and_link "$REPO_ROOT/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 backup_and_link "$REPO_ROOT/bash/bashrc" "$HOME/.bashrc"
 backup_and_link "$REPO_ROOT/bash/blerc" "$HOME/.blerc"
+backup_and_link "$REPO_ROOT/.xinitrc" "$HOME/.xinitrc"
+backup_and_link "$REPO_ROOT/.zshrc" "$HOME/.zshrc"
 backup_and_link "$REPO_ROOT/i3/config" "$HOME/.config/i3/config"
 backup_and_link "$REPO_ROOT/i3status/config" "$HOME/.config/i3status/config"
 backup_and_link "$REPO_ROOT/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
