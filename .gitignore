@@ -1,0 +1,41 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.nmconnection
+credentials
+credentials.json
+auth.json
+secrets.*
+secret.*
+
+# SSH private keys
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+id_ecdsa
+id_ecdsa.*
+
+# Package and cloud credentials
+.netrc
+.npmrc
+.pypirc
+.aws/credentials
+.config/gcloud/
+
+# Shell history and logs
+.bash_history
+.zsh_history
+*_history
+*.log
+
+# Local/editor files
+.DS_Store
+*.swp
+*.swo
