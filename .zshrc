@@ -2,6 +2,10 @@
 autoload -Uz compinit
 compinit
 
+# show current dir
+PROMPT='%n@%m %~ % '
+
+
 # Command history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

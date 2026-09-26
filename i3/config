@@ -6,6 +6,15 @@ set $mod Mod4
 # touchpad scrolling speed 
 exec --no-startup-id xinput set-prop "ELAN0524:00 04F3:3215 Touchpad" "libinput Scrolling Pixel Distance" 23 
 
+# deactivate sleep
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+exec_always --no-startup-id xset s noblank
+
+# set background
+exec --no-startup-id ~/.fehbg
+
+
 # set keyboard layout at Startup
 exec_always --no-startup-id setxkbmap -layout us,us -variant ,colemak
 
@@ -44,7 +53,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 # Kill window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Screenshot
 bindsym --release Print exec --no-startup-id maim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
