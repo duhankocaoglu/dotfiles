@@ -333,3 +333,17 @@ sudo pacman -S --needed inotify-tools rofi
 
 It assumes the repository is cloned at `~/dotfiles` and that Git authentication
 is already configured.
+
+## License
+
+The original files in this repository are free software licensed under the
+[GNU General Public License v3.0 or later](LICENSE) (`GPL-3.0-or-later`).
+You may use, study, modify, and share them. If you distribute modified versions,
+you must preserve the same freedoms and make the corresponding source available
+under GPL-compatible terms.
+
+Copyright (C) 2026 duhankocaoglu.
+
+Third-party code, assets, dependencies, and gitlinks or submodules remain under
+their respective licenses. Any incorporated MIT-licensed material must retain
+its original copyright and permission notice.
